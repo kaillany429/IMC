@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+
+    <h1>Índice de Massa Corporal</h1>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#como">Como é feito</a> </li>
+                <li><a href="#importante">Por que é importante</a></li>
+                <li><a href="#calcular">Calcule seu IMC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="inicio">
+        <p> O IMC é uma ferramenta muito utilizada por profissionais de saúde, como médicos, nutricionistas, enfermeiros e profissionais de educação física. É um dos métodos mais simples e acessíveis para estimar a composição corporal e identificar se uma pessoa está com, obesidade ou desnutrição.No entanto, o IMC não é considerado a forma mais exata de avaliar o peso, pois não leva em conta a composição corporal. Por isso, é aconselhável consultar um profissional da saúde!</p>
+        <img src="https://img.freepik.com/fotos-gratis/pessoa-com-transtorno-alimentar-com-problemas-de-peso_23-2149243012.jpg?semt=ais_hybrid"
+            alt="">
+    </section>
+
+    <section id="como">
+        <p>O IMC é calculado dividindo o peso (em kg) pela altura ao quadrado (em m), de acordo com a seguinte fórmula:
+            IMC = peso / (altura x altura).O resultado de IMC é dado em kg/m2.</p>
+        <img src="https://cdn.pixabay.com/photo/2014/02/01/18/00/money-256312_960_720.jpg" alt="">
+    </section>
+
+    <section id="importante">
+        <p>De acordo com o resultado de IMC é possível prever o risco que cada pessoa tem de desenvolver doenças
+            crônicas. Isto porque quanto maior é o valor do IMC, maior é a quantidade de gordura acumulada no corpo e
+            maior o risco de doenças como pressão alta, diabetes e problemas cardíacos.Sempre que possível, o resultado
+            de IMC deve ser interpretado por um nutricionista, que irá adequar a dieta de acordo com os objetivos de
+            cada pessoa e seu histórico de saúde.</p>
+        <img src="https://cdn.pixabay.com/photo/2020/11/03/15/31/doctor-5710155_1280.jpg" alt="">
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section id="calcular">
+        <label for="altura"> Altura:</label>
+        <input type="number" name="altura" id="altura">
+
+        <label for="peso"> Peso (kg):</label>
+        <input type="number" name="peso" id="peso">
+
+        <button onclick="calcImc()"> Calcular IMC </button>
+
+        <p>Seu índice de massa corporal é: <span id="resultado"></span> </p>
+
+
+
+        <script>
+            function calcImc() {
+                const altura = document.getElementById("altura").value;
+                const peso = document.getElementById("peso").value;
+                const resultado = peso / (altura ** 2);
+
+                document.getElementById("resultado").textContent = resultado.toFixed(2);
+            }
+
+
+
+
+
+        </script>
+    </section>
+
+
+    <footer>
+        <p>&copy;2024 Saiba seu IMC.Todos direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
